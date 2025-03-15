@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# 📈 Bitcoin Price Candlestick Chart (Live)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **live Bitcoin candlestick chart** built with **React** and **D3.js**. It fetches real-time data from the CoinCap API and visualizes Bitcoin price changes over time using candlesticks.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+✅ Live updates every 60 seconds using real-time data from CoinCap API.  
+✅ Candlestick representation of open, high, low, and close prices.  
+✅ Clean and responsive design using **D3.js** and **React**.  
+✅ Light and Dark themes with smooth toggling.  
+✅ Scalable and customizable chart axes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📂 Folder Structure
 
-### `npm test`
+```
+src/
+├── components/
+│   ├── CandlestickChart.jsx
+├── App.jsx
+├── index.jsx
+└── styles.css
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React** – For building the UI.
+- **D3.js** – For data visualization.
+- **Axios** – For making API calls.
+- **CoinCap API** – For fetching real-time Bitcoin price data.
+- **CSS** – For styling.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🌐 API Used
 
-### `npm run eject`
+[CoinCap API](https://docs.coincap.io/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Endpoint:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+https://api.coincap.io/v2/candles?exchange=poloniex&interval=m1&baseId=bitcoin&quoteId=usd
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Data Format:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```json
+{
+  "time": 1709931230000,
+  "open": 48000.32,
+  "high": 48100.21,
+  "low": 47950.12,
+  "close": 48030.1
+}
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📥 Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the repository**:
 
-### Code Splitting
+```bash
+git clone https://github.com/your-username/bitcoin-candlestick-chart.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Install dependencies**:
 
-### Analyzing the Bundle Size
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Start the app**:
 
-### Making a Progressive Web App
+```bash
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🎯 Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Open the app in your browser:  
+   ➡️ `http://localhost:3000`
+2. Watch the chart update automatically every 60 seconds.
+3. Toggle between **Light** and **Dark** modes.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🚧 Future Improvements
 
-### `npm run build` fails to minify
+- 📊 Add volume bars below the candlesticks.
+- 🚀 Improve performance for large datasets.
+- 🎯 Add multiple currency options.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch
+3. Submit a pull request
+
+---
+
+## 📃 License
+
+This project is licensed under the **MIT License**.
+
+---
